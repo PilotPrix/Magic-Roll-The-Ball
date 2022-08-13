@@ -30,4 +30,13 @@ public class PlayerController : MonoBehaviour
             else rb.gravityScale = gravityMultiplier;
         }
     }
+    // When the player falls in the basket, say you win, move to next level
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.name);
+        if (collision.gameObject.name == "Basket Collider")
+        {
+            Debug.Log("You win!");
+        }
+    }
 }
