@@ -34,9 +34,10 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.name);
-        if (collision.gameObject.name == "Basket Collider")
+        if (collision.gameObject.name == "Hat Collider")
         {
             Debug.Log("You win!");
+            gameObject.SetActive(false);
         }
     }
 }
