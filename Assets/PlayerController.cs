@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
+    public GameObject winPanel;
+
     public float gravityMultiplier = 1f;
     public bool inverseGravity = false;
 
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.name == "Hat Collider")
         {
             Debug.Log("You win!");
+            winPanel.SetActive(true);
             gameObject.SetActive(false);
         }
     }
