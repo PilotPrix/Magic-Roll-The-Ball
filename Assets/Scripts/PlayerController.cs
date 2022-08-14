@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,7 +14,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb.gravityScale = gravityMultiplier;
-        Debug.Log("Hello");
     }
 
     // Update is called once per frame
@@ -40,7 +38,6 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("You win!");
             winPanel.SetActive(true);
-            SceneManager.LoadScene("Scene test", LoadSceneMode.Additive);
             gameObject.SetActive(false);
         }
     }
