@@ -36,7 +36,6 @@ public class PlayerController : MonoBehaviour
         Debug.Log(collision.name);
         if (collision.gameObject.name == "Hat Collider")
         {
-            Debug.Log("You win!");
             winPanel.SetActive(true);
             gameObject.SetActive(false);
         }

@@ -8,14 +8,12 @@ public static class Loader
     public enum Scene
     {
         Scene1,
+        Scene2,
+        Scene3,
         SceneTest,
     }
     public static void Load(Scene scene)
     {
-        SceneManager.LoadScene(scene.ToString());
-    }
-    public static void print()
-    {
-        Debug.Log(Scene.Scene1.ToString());
+        SceneManager.LoadScene(scene.ToString(), LoadSceneMode.Single);
     }
 }

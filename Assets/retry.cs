@@ -19,6 +19,6 @@ public class retry : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("Scene3")
+        SceneManager.LoadScene("Scene3");
     }
 }
